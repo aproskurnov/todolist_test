@@ -1,0 +1,59 @@
+@import "../../globals";
+
+.sort-list{
+  height: 800px;
+  overflow-y: scroll;
+  position: relative;
+  &__table {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    table-layout: fixed;
+  }
+  &__caption{
+    display: table-caption;
+    text-align: center;
+  }
+  &__header{
+    display: table-header-group;
+  }
+  &__body{
+    display: table-row-group;
+  }
+  &__row{
+    display: table-row;
+    height: 30px;
+  }
+  &__cell{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid $dark-10;
+  }
+  &__header-cell{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid $dark-10;
+    &_sortable{
+      background-color: $dark-10;
+    }
+  }
+  &__sortable{
+    &_sorted{
+      display: inline-block;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        border-top: 0.5rem solid black;
+        width: 0;
+        height: 0;
+        right: -1.7rem;
+        top: 0.5rem;
+      }
+    }
+  }
+}

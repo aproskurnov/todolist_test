@@ -1,0 +1,26 @@
+@import "../../globals";
+
+.textarea{
+  &__field{
+    min-height: 20rem;
+    resize: none;
+    box-sizing: border-box;
+    border: 1px solid $dark-10;
+    border-left: none;
+    border-right: none;
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 2rem 0 2rem 1rem;
+    min-width: 0; //hack for firefox
+
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid $dark;
+    }
+    &_centered{
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+}
